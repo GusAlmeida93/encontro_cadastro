@@ -25,7 +25,7 @@ SECRET_KEY = "4flwen%yun)fh%2sx3fieqm*18#cu*qcm6jl1c#4grak42kuz4"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["165.227.193.134"]
 
 
 # Application definition
@@ -120,7 +120,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "encontro_cadastro/static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
