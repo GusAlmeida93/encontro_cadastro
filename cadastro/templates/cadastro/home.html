@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta http-equiv="refresh" content="5" />
+  <link rel="icon" href="../../../../favicon.ico" />
+
+  <title>Encontro Febrafar</title>
+
+  <!-- Principal CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+<main role="main">
+
+  <!--<section class="jumbotron text-center"-->
+  <div class="container">
+    <img src="{% static 'febrafar.png' %}" height="100" />
+  </div>
+  <!--</section-->
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Laboratório</th>
+        <th scope="col">Rede</th>
+        <th scope="col">Mesa</th>
+        <th scope="col">Horário</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for x in cadastros|dictsort:"associado" %}
+      <tr>
+        <th scope="row">{{ x.associado }}</th>
+        <td>{{ x.rede }}</td>
+        <td>{{ x.mesa }}</td>
+        <td>{{ x.hora|date:"G:i:s" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if cadastros.has_other_pages %}
+  <ul class="pagination">
+    {% if cadastros.has_previous %}
+    <li class="page-item"><a class="page-link"
+        href="?page={{ cadastros.previous_page_number }}"><span>&laquo;</span></a></li>
+    {% else %}
+    <li class="page-item disabled"><a class="page-link" tabindex="-1"><span>&laquo;</span> </a> </li>
+    {% endif %}
+    {% for i in cadastros.paginator.page_range %}
+    {% if cadastros.number == i %}
+    <li class="page-item active"><span><a class="page-link"> {{ i }} <span class="sr-only">(current)</span></span></a>
+    </li>
+    {% else %}
+    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% if cadastros.has_next %}
+    <li class="page-item"><a class="page-link" href="?page={{ cadastros.next_page_number }}"><span>&raquo;</span></a>
+    </li>
+    {% else %}
+    <li class="page-item disabled"><a class="page-link"> <span>&raquo;</span></a> </li>
+    {% endif %}
+  </ul>
+  {% endif %}
+  <br />
+  <footer class="text-muted text-right">
+    <div class="container">
+      <p>
+        &copy; BIT Febrafar {% now "Y" %}
+      </p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Principal JavaScript do Bootstrap
+    ================================================== -->
+<!-- Foi colocado no final para a página carregar mais rápido -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
