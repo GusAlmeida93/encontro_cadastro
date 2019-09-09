@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name='Cadastro',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('laboratorio', models.CharField(choices=[('Sanofi', 'Sanofi'), ('Hypera', 'Hypera'), ('Sandoz', 'Sandoz')], max_length=50)),
-                ('rede', models.CharField(choices=[('Ultra Popular', 'Ultra Popular'), ('Agafarma', 'Agafarma'), ('Drogaria Total', 'Drogaria Total')], max_length=50)),
+                ('laboratorio', models.CharField(choices=[('Sanofi', 'Sanofi'), ('Hypera', 'Hypera'), ('Sandoz', 'Sandoz')], max_length=100)),
+                ('rede', models.CharField(choices=[('Ultra Popular', 'Ultra Popular'), ('Agafarma', 'Agafarma'), ('Drogaria Total', 'Drogaria Total')], max_length=100)),
                 ('dia', models.DateField(default='06/09/2019')),
                 ('hora', models.TimeField(default='01:02:41')),
             ],
