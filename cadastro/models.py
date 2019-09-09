@@ -479,6 +479,6 @@ class Cadastro(models.Model):
     hora = models.TimeField(default=now.strftime("%H:%M:%S"))
 
     def __str__(self):
-        texto = f"{self.associado} - {self.rede}"
+        texto = "{} - {}".format(self.associado, self.rede)
         return texto
 
