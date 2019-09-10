@@ -7,7 +7,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def home(request):
-    cadastros_list = Cadastro.objects.all()
+    cadastros_list = Cadastro.objects.all().order_by("-associado")
 
     page = request.GET.get('page', 1)
 
