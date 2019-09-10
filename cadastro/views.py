@@ -11,7 +11,7 @@ def home(request):
 
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(cadastros_list, 20)
+    paginator = Paginator(cadastros_list, 15)
     try:
         cadastros = paginator.page(page)
     except PageNotAnInteger:
