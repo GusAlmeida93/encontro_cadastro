@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ('cadastro', '0002_auto_20190906_1020'),
     ]
-
+    
     operations = [
         migrations.AlterField(
             model_name='cadastro',

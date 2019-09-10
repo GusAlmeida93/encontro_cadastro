@@ -150,22 +150,22 @@ class Cadastro(models.Model):
     gam = "Gam"
     gransmed = "Gransmed"
     grupo_acripel = "Grupo Acripel"
-    grupo_andorinha = "Grupo Andorinha"
+    grupo_andorinha = "Andorinha"
     grupo_cordeiro = "Grupo Cordeiro"
-    grupo_dimebras = "Grupo Dimebras"
-    grupo_dimed = "Grupo Dimed"
-    grupo_dislab = "Grupo Dislab"
-    grupo_dismed = "Grupo Dismed"
-    grupo_dp4 = "Grupo Dp4"
-    grupo_emefarma = "Grupo Emefarma "
-    grupo_farmix = "Grupo Farmix"
-    grupo_medicamental = "Grupo Medicamental"
-    grupo_navarro = "Grupo Navarro"
+    grupo_dimebras = "Dimebras"
+    grupo_dimed = "Dimed"
+    grupo_dislab = "Dislab"
+    grupo_dismed = "Dismed"
+    grupo_dp4 = "Dp4"
+    grupo_emefarma = "Emefarma "
+    grupo_farmix = "Farmix"
+    grupo_medicamental = "Medicamental"
+    grupo_navarro = "Navarro"
     grupo_orgafarma = "Grupo Orgafarma"
     grupo_panpharma = "Panpharma"
-    grupo_profarma = "Grupo Profarma"
+    grupo_profarma = "Profarma"
     grupo_santa_cruz = "Santa Cruz"
-    grupo_total = "Grupo Total"
+    grupo_total = "Total"
     jkmedicamentos = "Jkmedicamentos"
     maxifarma = "Maxifarma"
     meditem = "Meditem"
@@ -334,20 +334,20 @@ class Cadastro(models.Model):
         (gransmed,  "Gransmed"),
         (gross,  "Gross"),
         (grupo_acripel,  "Grupo Acripel"),
-        (grupo_andorinha,  "Grupo Andorinha"),
+        (grupo_andorinha,  "Andorinha"),
         (grupo_cordeiro,  "Grupo Cordeiro"),
-        (grupo_dimebras,  "Grupo Dimebras"),
-        (grupo_dimed,  "Grupo Dimed"),
-        (grupo_dislab,  "Grupo Dislab"),
-        (grupo_dismed,  "Grupo Dismed"),
-        (grupo_dp4,  "Grupo Dp4"),
-        (grupo_emefarma,  "Grupo Emefarma "),
-        (grupo_farmix,  "Grupo Farmix"),
-        (grupo_medicamental,  "Grupo Medicamental"),
-        (grupo_navarro,  "Grupo Navarro"),
+        (grupo_dimebras,  "Dimebras"),
+        (grupo_dimed,  "Dimed"),
+        (grupo_dislab,  "Dislab"),
+        (grupo_dismed,  "Dismed"),
+        (grupo_dp4,  "Dp4"),
+        (grupo_emefarma,  "Emefarma "),
+        (grupo_farmix,  "Farmix"),
+        (grupo_medicamental,  "Medicamental"),
+        (grupo_navarro,  "Navarro"),
         (grupo_orgafarma,  "Grupo Orgafarma"),
-        (grupo_profarma,  "Grupo Profarma"),
-        (grupo_total,  "Grupo Total"),
+        (grupo_profarma,  "Profarma"),
+        (grupo_total,  "Total"),
         (grupofarma,  "Grupofarma"),
         (herbarium,  "Herbarium"),
         (hiperfarma,  "Hiperfarma"),
